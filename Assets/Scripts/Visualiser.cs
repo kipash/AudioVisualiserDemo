@@ -17,7 +17,7 @@ public abstract class Visualiser : MonoBehaviour
         for (int i = 0; i < _EQAppliedBuffer.Length; i++)
         {
             float x = (float)i / buffer.Length;
-            float y = (float)buffer[i] / spectrumMax;
+            float y = (float)buffer[i];// / spectrumMax;
             _EQAppliedBuffer[i] = Mathf.Clamp01(EQFilter.Evaluate(x)) * y;
         }
 

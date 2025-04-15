@@ -2,7 +2,7 @@
 
 public class ChemicalsVisualiser : Visualiser
 {
-    public MeshRenderer MeshRenderer;
+    public Renderer Renderer;
 
     public float BaseSpeedMultiplier = 0.1f;
     public float ExtraSpeedDecay = 1;
@@ -26,6 +26,6 @@ public class ChemicalsVisualiser : Visualiser
 
         _extraTime = Mathf.Lerp(_extraTime, 0, dt * ExtraSpeedDecay);
 
-        MeshRenderer.material.SetFloat("_CustomTime", _time);
+        Renderer.material.SetFloat("_CustomTime", _time);
     }
 }
